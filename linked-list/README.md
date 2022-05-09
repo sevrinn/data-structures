@@ -3,7 +3,9 @@
 ### What is a Linked List?
 
 A linked list is a collection of **data elements**.
+
 A data element is represented as a **node** in a linked list.
+
 A node consists of two parts: data and a pointer to the next node.
 
 ![a diagram of a single nodes anatomy](assets/node-anatomy.jpg)
