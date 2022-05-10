@@ -1,30 +1,36 @@
 import LinkedListNode from './LinkedListNode'
 
-// defines LinkedList class which maintains the head pointer of the list
-export default class LinkedList {
-	constructor() {
-		this.head = null
-	}
-
-	/**
-	 * 5: Constructor function initializes obj with property "head", giving it a value of "null". This is because when a linked list obj is initally created, it doesnt contain any nodes.
-	 *
-	 * When we add our first node to it, we will assign it to the head pointer
-	 */
-
-	append(value) {
-		// creates new node with value and sets next "pointer" to head "pointer" so they are pointing at same node
-		const newNode = LinkedListNode(value, this.head)
-
-		//if no head exists, make new node the head
-		if (!this.head) {
-			this.head = newNode
-			this.tail = newNode
-
-			return this
-		}
-		// attach new node to end of linked list
-		this.tail.next = newNode
-		this.tail = newNode
+//this is just here so i can run with coderunner.
+class LinkedListNode {
+	constructor(value, next = null) {
+		this.value = value
+		this.next = next
 	}
 }
+
+// defines LinkedList class which maintains the head pointer of the list
+class LinkedList {
+	// constructor function initializes obj with properites head and tail.
+	// it sets them to null becuase when initally created, it doesnt contain any nodes
+	constructor() {
+		this.head = null
+		this.tail = null
+	}
+
+	prepend(value) {
+		// creates new node and makes it the head
+		const newNode = new LinkedListNode(value, this.head)
+		this.head = newNode
+
+		//if no tail exists, make new node the tail
+		if (!this.tail) {
+			this.tail = newNode
+		}
+		return this
+	}
+}
+
+let myList = new LinkedList()
+console.log('Upon creation: ', myList)
+myList.prepend('A')
+console.log('After prepend: ', myList)
