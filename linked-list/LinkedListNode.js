@@ -5,8 +5,6 @@ export default class LinkedListNode {
 	}
 }
 
-console.log(typeof LinkedListNode)
-
 /**
  * My attempt at breaking this down line by line
  *
