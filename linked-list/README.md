@@ -19,15 +19,18 @@ Data elements are linked using pointers and are **not** stored in contiguous mem
 - The head pointer points to the first node of the list
 - Can grow/shrink in size during execution
 - Can be make just as long as needed
-- Allocates memory as the list grows. Must know
+- Allocates memory as the list grows. Must know size ahead of time
+- Main operations are: insert and delete
 
 ### Advantages
 
 - Nodes can be easily inserted/deleted from a linked list without reorganizing the entire data structure.
+- Elements can be added indefintely. An array would fill up or have to resize (js)
+- Elements are easily removed. Removing elements from an array leaves empty spaces, wasting memory
 
 ### Cons
 
-- Search operations are slow. Random access of data elements isnt allowed. Nods must be sequentially accessed starting from the first node
+- Search operations are slow. Random access of data elements isnt allowed. Nodes must be sequentially accessed starting from the first node
 - Uses more memory than arrays because of storage of pointers.
 
 ### Types of Linked Lists
@@ -35,6 +38,12 @@ Data elements are linked using pointers and are **not** stored in contiguous mem
 - **Singly Linked Lists:** Each node contains only one pointer to next node.
 - **Doubly Linked Lists:** Each node contains two pointers. One to next node and one to previous node.
 - **Circular Linked Lists:** Circular linked lists are a variation where the last node points to the first node or any node before it, forming a loop.
+
+### Usage
+
+Linked lists should be used for large lists of data where the total number of items in the list changes.
+
+Conversely, arrays are better for small lists where maximum number is known.
 
 ### Resources
 
