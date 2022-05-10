@@ -14,5 +14,5 @@ console.log(typeof LinkedListNode)
  * 2: When an instance of node is created, the constructor func is called, initializing two properties:
  *    - value
  *    - a "pointer" named next (with a default value of null)
- * 7: LLNode is created with a toString node
+ *
  */
